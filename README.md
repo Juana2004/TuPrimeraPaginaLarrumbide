@@ -9,7 +9,7 @@
 
 ## pasos para ejecutar el proyecto
 
-- https://github.com/Juana2004/TuPrimeraPaginaLarrumbide.git
+- git clone https://github.com/Juana2004/TuPrimeraPaginaLarrumbide.git
 - Creacion del entorno virtual
 - Activar el entorno virtual
 - Descargar django
