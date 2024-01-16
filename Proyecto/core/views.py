@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from . import models
 from . import forms 
+from . models import Profesor
 
 def index(request):
     return render(request, "core/index.html")
