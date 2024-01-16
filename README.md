@@ -18,11 +18,22 @@
 
 '''
 python -m venv .venv
+'''
+'''
 .\.venv\Scripts\activate (windows)
+'''
+'''
 pip install django
+'''
+'''
 pip freeze >> requirements.txt
+'''
+'''
 django-admin startproject Proyecto
+'''
+'''
 django-admin startapp core
+'''
+'''
 python manage.py runserver
-
 '''
