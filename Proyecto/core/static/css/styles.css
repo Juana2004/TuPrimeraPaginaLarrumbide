@@ -1,0 +1,18 @@
+:root {
+    --color-primario: #B0C4B1; 
+    --color-secundario: #EDAFB8;  
+    --color-fondo: #F7E1D7;  
+    --color-texto: #4A5759;  
+  }
+  
+  body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+  }
+  
+  .btn {
+    background-color: var(--color-secundario);
+    color: var(--color-secundario);
+  }
+  
+  

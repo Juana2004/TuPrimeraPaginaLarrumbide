@@ -1,15 +1,23 @@
+{% load bootstrap4 static %}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device=width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-+Ro3Dm3K5sBdT1GKw5iRmApGtznPj4PvFvjO6+frjnhkfekqVROJNxI6lZiJnhel9Uf6c6vWnl4H8I4tr8xwwg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-7C4ln27RcRFE2JDOdDlTBRSN+SXNuAM/9mL4BoIp7KDEmFwAAUJesdOrhC+/OEmUZn8Dq5uSZ2uHUkNxznCepA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
-<body>
+<body class="animated fadeIn">  <!-- Puedes agregar clases de animación de animate.css aquí -->
 
 {% block contenido %}
 
 {% endblock contenido %}
 
+{% bootstrap_javascript %}
 </body>
 </html>

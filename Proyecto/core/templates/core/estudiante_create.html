@@ -1,11 +1,49 @@
-{% extends "core/base.html" %}
+{% extends 'core/base.html' %}
+{% load bootstrap4 %}
 
 {% block contenido %}
+    <div class="container mt-5">
+        <div class="card animate__animated animate__fadeIn">
+            <div class="card-body">
+                <h2 class="card-title text-center mb-4">Formulario de Estudiante</h2>
+                <form method="post" class="col-md-6 offset-md-3">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        <div class="form-group">
+                            {{ field.label_tag }}
+                            {{ field }}
+                            {% if field.help_text %}
+                                <small class="form-text text-muted">{{ field.help_text }}</small>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                    <button type="submit" class="btn btn-purple btn-block mt-3">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Guardar</button>
-    </form>
+    <style>
+        :root {
+            --color-primario: #ffccd5; 
+            --color-secundario: #EDAFB8;  
+            --color-fondo: #fff0f3;  
+            --color-texto: #590d22;  
+        }
 
+        body {
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+        }
+
+        .btn-purple {
+            background-color: var(--color-primario);
+            color: #590d22;
+        }
+
+        .animate__animated {
+            animation-duration: 1s;
+        }
+    </style>
+    
 {% endblock contenido %}

@@ -1,13 +1,26 @@
 {% extends "core/base.html" %}
+{% load bootstrap4 %}
 
 {% block contenido %}
-    {% for profesor in profesores  %}
-        <ul>
-            <li>
-                {{ profesor.nombre }}
-                {{ profesor.apellido }}
-                {{ profesor.email }}
-            </li>
-        </ul>        
-    {% endfor %}
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Lista de Profesores</h2>
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for profesor in profesores %}
+                    <tr>
+                        <td>{{ profesor.nombre }}</td>
+                        <td>{{ profesor.apellido }}</td>
+                        <td>{{ profesor.email }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% endblock contenido %}

@@ -1,12 +1,60 @@
-{%  extends 'core/base.html' %}
+{% extends 'core/base.html' %}
 
 {% block contenido %}
 
-    <h1>Entrega</h1>
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1 class="display-4 animate__animated animate__fadeIn">Bienvenido al Campus</h1>
+            <p class="lead animate__animated animate__fadeIn">Gestiona tus profesores y estudiantes de manera fácil.</p>
+            <hr class="my-4 animate__animated animate__fadeIn">
+            <div class="row mb-3 animate__animated animate__fadeIn">
+                <div class="col-md-6">
+                    <a class="btn btn-purple btn-lg btn-block" href="{% url 'profesor_list' %}" role="button">
+                        <i class="fas fa-users"></i> Ver Profesores
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-purple btn-lg btn-block" href="{% url 'profesor_create' %}" role="button">
+                        <i class="fas fa-user-plus"></i> Agregar Profesores
+                    </a>
+                </div>
+            </div>
+            <div class="row mb-3 animate__animated animate__fadeIn">
+                <div class="col-md-6">
+                    <a class="btn btn-purple btn-lg btn-block" href="{% url 'estudiante_list' %}" role="button">
+                        <i class="fas fa-graduation-cap"></i> Ver Estudiantes
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-purple btn-lg btn-block" href="{% url 'estudiante_create' %}" role="button">
+                        <i class="fas fa-user-graduate"></i> Agregar Estudiantes
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <button><a href="{% url 'profesor_list' %}">Ver Profesores</a></button>
-    <button><a href="{% url 'profesor_create' %}">Crear Profesores</a></button>
-    <button><a href="{% url 'estudiante_list' %}">Ver Estudiantes</a></button>
-    <button><a href="{% url 'estudiante_create' %}">Crear Estudiantes</a></button>
-    
+    <style>
+        :root {
+            --color-primario: #B0C4B1; 
+            --color-secundario: #EDAFB8;  
+            --color-fondo: #F7E1D7;  
+            --color-texto: #4A5759;  
+        }
+  
+        body {
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+        }
+
+        .btn-purple {
+            background-color: var(--color-primario);
+            color: #4A5759;
+        }
+
+        .animate__animated {
+            animation-duration: 10s;
+        }
+    </style>
+
 {% endblock contenido %}
