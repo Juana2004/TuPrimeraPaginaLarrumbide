@@ -4,6 +4,9 @@
 # Nombre y apellido
 -Juana Larrumbide
 
+# Usuario y contrasena superuser
+-Usuario: Juanal Contrasena: aki123
+
 # Resumen
 -El objetivo de esta entrega es desarrollar una pagina web con django.
 

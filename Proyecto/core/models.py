@@ -6,7 +6,7 @@ class Profesor(models.Model):
     email= models.EmailField() 
 
     def __str__(self) -> str:
-        return f"{self.nombre} {self.apellido}"
+        return f"Nombre: {self.nombre} - Apellido: {self.apellido}"
 
 class Estudiante(models.Model):
     nombre= models.CharField(max_length= 30)
@@ -14,7 +14,7 @@ class Estudiante(models.Model):
     email= models.EmailField() 
 
     def __str__(self) -> str:
-        return f"{self.nombre} {self.apellido}"
+        return f"Nombre: {self.nombre} - Apellido: {self.apellido}"
 
 class Curso(models.Model):
      nombre = models.CharField(max_length= 50)
@@ -22,7 +22,7 @@ class Curso(models.Model):
      profesor = models.ForeignKey(Profesor, on_delete=models.SET_NULL, null=True, blank=True)
 
      def __str__(self) -> str:
-        return f"{self.nombre} ({self.apellido}) - {self.profesor}"
+        return f"{self.nombre} - Profesor: {self.profesor}"
 
 
 class CursoEstudiantes(models.Model):
@@ -30,7 +30,7 @@ class CursoEstudiantes(models.Model):
     estudiante = models.ForeignKey(Estudiante, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
-        return f"{self.curso} {self.estudiante}"
+        return f"{self.curso} - Estudiante: {self.estudiante}"
 
 
 
