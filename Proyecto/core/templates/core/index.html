@@ -5,7 +5,7 @@
     <div class="container mt-5">
         <div class="text-center">
             <h1 class="display-4 animate__animated animate__fadeIn">Bienvenido al Campus</h1>
-            <p class="lead animate__animated animate__fadeIn">Gestiona tus profesores y estudiantes de manera fácil.</p>
+            <p class="lead animate__animated animate__fadeIn">Gestiona tus profesores, estudiantes y cursos de manera fácil.</p>
             <hr class="my-4 animate__animated animate__fadeIn">
             <div class="row mb-3 animate__animated animate__fadeIn">
                 <div class="col-md-6">
@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-md-6">
                     <a class="btn btn-purple btn-lg btn-block" href="{% url 'profesor_create' %}" role="button">
-                        <i class="fas fa-user-plus"></i> Agregar Profesores
+                        <i class="fas fa-user-plus"></i> Agregar Profesor
                     </a>
                 </div>
             </div>
@@ -27,7 +27,14 @@
                 </div>
                 <div class="col-md-6">
                     <a class="btn btn-purple btn-lg btn-block" href="{% url 'estudiante_create' %}" role="button">
-                        <i class="fas fa-user-graduate"></i> Agregar Estudiantes
+                        <i class="fas fa-user-graduate"></i> Agregar Estudiante
+                    </a>
+                </div>
+            </div>
+            <div class="row mb-3 animate__animated animate__fadeIn">
+                <div class="col-md-6 offset-md-3">
+                    <a class="btn btn-purple btn-lg btn-block" href="{% url 'curso_list' %}" role="button">
+                        <i class="fas fa-book"></i> Ver Cursos
                     </a>
                 </div>
             </div>
@@ -41,7 +48,7 @@
             --color-fondo: #F7E1D7;  
             --color-texto: #4A5759;  
         }
-  
+
         body {
             background-color: var(--color-fondo);
             color: var(--color-texto);

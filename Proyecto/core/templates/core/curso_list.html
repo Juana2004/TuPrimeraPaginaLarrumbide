@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1 class="display-4 animate__animated animate__fadeIn">Lista de Cursos</h1>
+            <hr class="my-4 animate__animated animate__fadeIn">
+            {% if cursos %}
+                <ul class="list-group">
+                    {% for curso in cursos %}
+                        <li class="list-group-item animate__animated animate__fadeIn">
+                            <strong>{{ curso.nombre }}</strong>
+                            <br>
+                            <span>Comisión: {{ curso.comision }}</span>
+                            <br>
+                            <span>Profesor: {{ curso.profesor }}</span>
+                            <br>
+                            <span>Estudiantes:</span>
+                            <ul>
+                                {% for ce in curso.cursoestudiantes_set.all %}
+                                    <li>{{ ce.estudiante.nombre }} {{ ce.estudiante.apellido }}</li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No hay cursos disponibles.</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock contenido %}
