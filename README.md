@@ -1,4 +1,3 @@
-# TuPrimeraPaginaLarrumbide
 # Preentrega 3 comision 56060
 
 # Nombre y apellido
