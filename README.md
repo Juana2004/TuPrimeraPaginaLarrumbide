@@ -15,6 +15,7 @@
 - Creacion del entorno virtual
 - Activar el entorno virtual
 - Descargar django
+- Descargar bootstrap 4
 - Instalar pip requirements
 - Crear Proyecto
 
@@ -26,6 +27,9 @@ python -m venv .venv
 '''
 '''
 pip install django
+'''
+'''
+pip install django-bootstrap4
 '''
 '''
 pip freeze >> requirements.txt
