@@ -13,17 +13,20 @@
 
 - git clone https://github.com/Juana2004/TuPrimeraPaginaLarrumbide.git
 - Creacion del entorno virtual
+- Activar el entorno virtual
 - Descargar django
 - Descargar bootstrap 4
 - Instalar pip requirements
 - Ubicarse en el directorio correcto
-- Activar el entorno virtual
 - Crear Proyecto
 - En tu buscador poner el siguiente link http://127.0.0.1:8000/
 - Activar el programa
 
 '''
 python -m venv .venv
+'''
+'''
+.\.venv\Scripts\activate (windows)
 '''
 '''
 pip install django
@@ -39,9 +42,6 @@ cd tuprimerapaginalarrumbide
 '''
 '''
 cd proyecto
-'''
-'''
-.\.venv\Scripts\activate (windows)
 '''
 '''
 django-admin startproject Proyecto
